@@ -1,0 +1,115 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .navbar-item:hover .dropdown-overlay {
+    display: block;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+    padding-right: 300px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-family: "Jersey 20", sans-serif;
+  }
+  .brand-name img{
+    width: 200px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-icon {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-overlay {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 200px; /* Adjust width as needed */
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-item {
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      flex-direction: column;
+    }
+  
+    .navbar-menu.mobile-open {
+      display: flex;
+    }
+  
+    .navbar-item {
+      margin: 10px 0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      padding: 10px;
+    }
+  
+    .navbar-item:hover .dropdown-overlay {
+      display: none;
+    }
+
+    .brand-name {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+      }
+  }
+  
